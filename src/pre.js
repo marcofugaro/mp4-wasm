@@ -12,7 +12,9 @@ Module['locateFile'] = function locateFileDefault (path, dir) {
   }
   if (Module['getWasmPath']) {
     return Module['getWasmPath'](path, dir, Module['simd']);
-  } else {
+  } else if (dir !== '') {
+		return '/_libraries/' + path;
+	} else {
     return dir + path;
   }
 };
