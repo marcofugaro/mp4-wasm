@@ -25,6 +25,7 @@ if(EMSCRIPTEN)
         -s MODULARIZE=1\
         -s FILESYSTEM=0\
         -s ASSERTIONS=0\
+        -s SINGLE_FILE=1\
         -Wno-invalid-source-encoding\
         -Wno-tautological-pointer-compare\
         --pre-js ../src/pre.js\
@@ -38,7 +39,7 @@ if(EMSCRIPTEN)
     target_compile_options(mp4
       PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fno-exceptions>
     )
-    
+
     option(WEB "Use Web Env" OFF)
 
     if (WEB)

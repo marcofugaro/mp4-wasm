@@ -22,5 +22,5 @@ cmake --build .
 cmake -DWEB=OFF -DCMAKE_TOOLCHAIN_FILE=$EMSCRIPTEN/cmake/Modules/Platform/Emscripten.cmake ..
 cmake --build .
 
-cp mp4.wasm ../build/mp4.wasm
-cp mp4.node.wasm ../build/mp4.node.wasm
+# cp mp4.wasm ../build/mp4.wasm
+# cp mp4.node.wasm ../build/mp4.node.wasm
